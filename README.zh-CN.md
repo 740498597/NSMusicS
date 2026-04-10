@@ -12,18 +12,31 @@ NSMusicS 是一个面向本地音乐库、私有云音乐和自建流媒体生�
 
 ## 当前发布与路线图
 
-截至 2026 年 3 月 22 日：
+截至 2026 年 4 月 9 日：
 
-- 最新的 Windows 版本已经上架微软商城。
+- 当前上架微软商城的 Windows 版本，是 `NSMusicS-Flutter` 的闭源付费商业版。
 - 微软商城网页链接：[https://apps.microsoft.com/detail/9N0RWS2TJXG1](https://apps.microsoft.com/detail/9N0RWS2TJXG1)
 - Windows 商店深链：`ms-windows-store://pdp/?productid=9N0RWS2TJXG1`
 - Windows 版本当前支持 15 天免费试用。
-- 此项目的重构版预计约两个月后推出，按当前节奏大致对应 2026 年 5 月。
+- 当前这个仓库发布到 GitHub Releases 的，仍然是开源的 Electron 过渡版本交付线。
+- 当前 Electron 与 Web 交付线属于过渡版本，用来承接下一代客户端矩阵正式落地前的这一段真空期。
+- 下一轮重构后的客户端版本，当前目标时间为 2026 年 5 月中旬左右。
+- 下一轮版本计划包含 React、React Native、Vue、Angular 四条客户端线。
+- 其中对应的 Electron / Web 客户端会分别遵循各自技术栈官方与社区推荐的最佳实现范式，而不是强行维持单一统一风格。
 - macOS / iOS 的 App Store 版本，以及 Android 的 Google Play 版本，是下一阶段的发布重点。
 - 产品方向仍然围绕本地音乐库、私有云音乐、主流自建音乐服务器兼容，以及与 [NineSong](https://github.com/Super-Badmen-Viper/NineSong) 的更深度整合持续推进。
 
-如果你想先体验面向用户的最新正式版本，优先从微软商城开始。  
-如果你想了解架构、规划和生态方向，这个仓库仍然是当前最主要的工作区入口。
+如果你想获取 Windows 商业正式版，优先从微软商城开始。  
+如果你想获取当前开源版本、查看源码、理解架构和路线图，就看这个仓库以及它的 GitHub Releases。
+
+## 开源版与微软商城版
+
+当前对外交付实际上分成了两条产品线。它们有关联，但不是同一个构建物，也不是同一个源码发布对象。
+
+| 版本 | 当前定位 | 分发渠道 | 源码可见性 | 收费方式 | 说明 |
+| --- | --- | --- | --- | --- | --- |
+| 开源版 | 当前仓库对外公开的开源交付线，目前主要对应 Electron / Web 过渡版本 | GitHub Releases、Docker 镜像、仓库源码 | 当前仓库公开可见 | 免费，受仓库许可证及相关项目条款约束 | 如果你要看代码、获取开源构建、跟进过渡版本和路线图，就看这一条 |
+| 微软商城版 | 当前 `NSMusicS-Flutter` 的 Windows 商业发行线 | 微软商城 | 闭源私有代码，不在当前仓库公开 | 付费，Windows 当前带 15 天试用策略 | 这是面向普通用户的商城包，发布节奏与当前开源仓库分离 |
 
 ## 为什么是 NSMusicS
 
@@ -42,7 +55,10 @@ NSMusicS 面向的，不是只有一个文件夹的简单曲库，而是已经�
 
 当前规划重点包括：
 
-- 预计约两个月后推出重构版 NSMusicS。
+- 当前 Electron / Web 版本继续作为过渡版本，承接正式重构版上线前的发布需求。
+- 重构后的 NSMusicS 客户端矩阵，当前目标时间为 2026 年 5 月中旬左右。
+- 并行推进 React、React Native、Vue、Angular 四条客户端实现线。
+- 重构后的 Electron / Web 客户端会按照各自技术栈及其社区推荐实践分别实现。
 - 持续推进与 NineSong 深度联动的客户端与云端体验。
 - 持续扩展 Windows、macOS、iOS、Android、Linux，以及更后续的 HarmonyOS 方向。
 - 继续强化本地曲库、私有云音乐和更广泛的自建媒体工作流支持。
@@ -57,6 +73,13 @@ NSMusicS 面向的，不是只有一个文件夹的简单曲库，而是已经�
 - macOS
 - Linux
 - Docker 相关桌面与 Web 邻接场景
+
+当前状态：
+
+- 这是当前仓库真正对外发布的开源版本线。
+- 这是当前对外发布的过渡客户端线。
+- 在 React、React Native、Vue、Angular 新客户端矩阵正式发布前，它仍然承担现阶段交付任务。
+- 当前过渡期内，Web 镜像与 Docker 交付仍然是重要组成部分。
 
 当前重点能力包括：
 
@@ -102,13 +125,20 @@ Flutter 产品线代表下一阶段的重要跨平台客户端方向，主要面
 - Windows
 - macOS
 
+当前分发说明：
+
+- 目前微软商城里已经上架的 Windows 版本，属于这条 Flutter 产品线。
+- 但那个商城包是闭源付费商业版，不是当前仓库发布的开源构建物。
+- 它的代码线、打包方式、发布节奏和商店策略，都与这里的开源 Electron / Web 过渡版本分开管理。
+
 当前路线图预计约两个月后推出重构版，移动端商店发布则会跟随 Windows 已上线节奏继续推进。
 
 ## 下载入口
 
-- Windows 正式版：[Microsoft Store 网页版](https://apps.microsoft.com/detail/9N0RWS2TJXG1)
+- Windows 商业版 Flutter：[Microsoft Store 网页版](https://apps.microsoft.com/detail/9N0RWS2TJXG1)
 - Windows 商店深链：`ms-windows-store://pdp/?productid=9N0RWS2TJXG1`
-- Electron Releases：https://github.com/Super-Badmen-Viper/NSMusicS/releases
+- 开源 Electron Releases：https://github.com/Super-Badmen-Viper/NSMusicS/releases
+- Web 镜像 Docker 镜像：https://hub.docker.com/r/xiangch007/nsmusics
 - 旧版 WPF Releases：https://github.com/Super-Badmen-Viper/NSMusicS_WPF/releases/tag/NSMusicS_Win(WPF)_0.9.0
 - NineSong Releases：https://github.com/Super-Badmen-Viper/NineSong/releases/
 
@@ -125,11 +155,11 @@ Flutter 产品线代表下一阶段的重要跨平台客户端方向，主要面
 
 | 项目 | 状态 | 技术栈 | 平台 | 许可证 |
 | --- | --- | --- | --- | --- |
-| [NSMusicS Desktop and Docker](https://github.com/Super-Badmen-Viper/NSMusicS) | 持续更新 | Electron、Node.js、Vue、TypeScript、SQLite、Docker | Windows、Linux、Docker、macOS | AGPL-3.0，商业使用限制以项目说明为准 |
+| [NSMusicS Desktop and Docker](https://github.com/Super-Badmen-Viper/NSMusicS) | 过渡版本 | Electron、Node.js、Vue、TypeScript、SQLite、Docker | Windows、Linux、Docker、macOS | AGPL-3.0，商业使用限制以项目说明为准 |
 | [NineSong](https://github.com/Super-Badmen-Viper/NineSong) | 公开快照（冻结） | Go、MongoDB、Gin、JWT、SQLite、Docker | Docker | AGPL-3.0，商业使用限制以项目说明为准 |
 | NineSongAI | 持续更新 | Java、MongoDB、Spring Boot、MySQL、Docker | Docker | AGPL-3.0，商业使用限制以项目说明为准 |
 | NineSongPro | 持续更新 | Java、MongoDB、Spring Cloud Alibaba、MySQL、Docker | Docker | AGPL-3.0，商业使用限制以项目说明为准 |
-| NSMusicS For Flutter | 持续更新 | Flutter、Dart | Android、iOS、Windows、macOS | AGPL-3.0，商业使用限制以项目说明为准 |
+| NSMusicS For Flutter（微软商城商业版） | Windows 商业版已上架，其它平台形态持续推进 | Flutter、Dart | 当前已上架 Windows；产品线目标覆盖 Android、iOS、macOS | 专有闭源付费版 |
 | NSMusicS For HarmonyOS | 规划中 | ArkTS、ArkUI | HarmonyOS | AGPL-3.0，商业使用限制以项目说明为准 |
 | NSMusicS For Audio | 规划中 | PyTorch、Python、Jupyter、MATLAB | Docker | AGPL-3.0，商业使用限制以项目说明为准 |
 | NSMusicS For Knowledge Graph | 规划中 | NebulaGraph 或 Neo4j | Docker | AGPL-3.0，商业使用限制以项目说明为准 |
